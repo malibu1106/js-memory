@@ -10,3 +10,65 @@ h1 {
     font-size: 75px;
     margin: 20px auto;
 }
+
+#conteneur-cartes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 500px;
+    margin: auto;
+}
+
+.card {
+    width: 100px;
+    height: 160px;
+    border: solid black 3px;
+    position: relative;
+    margin: 5px;
+    line-height: 100px;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/*.card::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}*/
+
+
+
+.red {
+    background: red;
+}
+
+.green {
+    background: green;
+}
+
+.yellow {
+    background: yellow;
+}
+
+.blue {
+    background: blue;
+}
+
+.purple {
+    background: purple;
+}
+
+.orange {
+    background: orange;
+
+}
+
+.card {
+    background-image: url("test.png");
+}
