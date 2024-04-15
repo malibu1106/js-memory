@@ -31,19 +31,6 @@ h1 {
     border-radius: 8px;
 }
 
-/*.card::after {
-    content: "";
-    width: 100px;
-    height: 100px;
-    background: black;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    left: 0;
-}*/
-
-
-
 .red {
     background: red;
 }
@@ -71,4 +58,10 @@ h1 {
 
 .card {
     background-image: url("test.png");
+}
+
+span {
+    text-align: center;
+    display: block;
+    font-size: 50px;
 }

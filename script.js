@@ -5,7 +5,7 @@ function createCardDiv(color, id) { //fonction pour créer les cartes
     let div = document.createElement("div"); // on créé une div
     div.className = "card " + color; // Applique la classe card et sa classe de couleur à la carte
     div.id = id;
-    div.setAttribute('onclick', 'clearCard(this.id)')
+    div.setAttribute('onclick', 'chosenCard(this.id)')
     document.getElementById('conteneur-cartes').appendChild(div); // push la carte dans mon conteneur
 }
 
@@ -34,10 +34,52 @@ function shuffleCards() { // mélange des cartes
 shuffleCards(); //on appelle la fonction pour mélanger les cartes
 
 // TEST FUNCTION RETIRE OPACITY CARTE
-function clearCard(id) {
+let firstOrSecondCard = 0;
+let chosenCard1;
+let chosenCard2;
+let points = 0;
 
-    document.getElementById(id).style.backgroundImage = "none";
+function chosenCard(id) {
+
+    /*document.getElementById(id).style.backgroundImage = "none"; // On retire le background qui cache la couleur des cartes*/
+    firstOrSecondCard++;
+
+    if (firstOrSecondCard == 1) {
+        chosenCard1 = document.getElementById(id).className;
+        document.getElementById(id).style.backgroundImage = "none"; // On retire le background qui cache la couleur des cartes
+
+    }
+    if (firstOrSecondCard == 2) {
+        chosenCard2 = document.getElementById(id).className;
+        document.getElementById(id).style.backgroundImage = "none"; // On retire le background qui cache la couleur des cartes
+        if (chosenCard1 === chosenCard2) {
+
+            chosenCard1 = "temp";
+            chosenCard2 = "temp";
+            firstOrSecondCard = 0;
+            points++;
+            document.getElementById("success").innerHTML = points;
+            if (points > 5) { document.getElementById("success").innerHTML = "BRAVO"; }
+        }
+        else {
+            setTimeout(() => { hideCards(); }, "1500");
+
+        }
+
+    }
+
+
+
+
 }
 
 
-
+function hideCards() {
+    document.getElementsByClassName(chosenCard1)[0].style.backgroundImage = "url(test.png)";
+    document.getElementsByClassName(chosenCard1)[1].style.backgroundImage = "url(test.png)";
+    document.getElementsByClassName(chosenCard2)[0].style.backgroundImage = "url(test.png)";
+    document.getElementsByClassName(chosenCard2)[1].style.backgroundImage = "url(test.png)";
+    chosenCard1 = "temp";
+    chosenCard2 = "temp";
+    firstOrSecondCard = 0;
+}
