@@ -1,5 +1,4 @@
 body {
-    background: skyblue;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,13 +14,13 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 500px;
+    max-width: 1400px;
     margin: auto;
 }
 
 .card {
-    width: 100px;
-    height: 160px;
+    width: 150px;
+    height: 250px;
     border: solid black 3px;
     position: relative;
     margin: 5px;
@@ -56,8 +55,49 @@ h1 {
 
 }
 
+.pink {
+    background: pink;
+}
+
+.teal {
+    background: teal;
+}
+
+.black {
+    background: black;
+}
+
+.silver {
+    background: silver;
+}
+
+.gray {
+    background: gray;
+}
+
+.white {
+    background: white;
+}
+
+.maroon {
+    background: maroon;
+}
+
+.lime {
+    background: lime;
+}
+
+.olive {
+    background: olive;
+}
+
+.fuchsia {
+    background: fuchsia;
+}
+
 .card {
     background-image: url("test.png");
+    background-size: 30px;
 }
 
 span {
