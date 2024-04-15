@@ -1,0 +1,12 @@
+body {
+    background: skyblue;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 75px;
+    margin: 20px auto;
+}
